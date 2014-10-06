@@ -11,6 +11,28 @@ end
 group :development do
   gem 'haml-rails'
   gem 'sqlite3'
+  gem 'annotate', '~>2.6.5'
+  gem 'better_errors'
+end
+
+group :development, :test do
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+  gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
+  gem 'guard-spork'
+  gem 'childprocess'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.43.0'
+  gem 'capybara', '2.4.3'
+  gem 'factory_girl_rails'
+  gem 'cucumber'
+  # , '1.2.5' # Spork not supported as of Cucumber 1.3.0, need to use 1.2.5
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 # Use SCSS for stylesheets
