@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+gem 'haml-rails'
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg', '0.17.1'
@@ -10,10 +11,13 @@ group :production do
 end
 
 group :development do
-  gem 'haml-rails'
   gem 'sqlite3'
   gem 'annotate', '~>2.6.5'
   gem 'better_errors'
+  gem 'guard-migrate'
+  gem 'guard-spring'
+  gem 'guard-rails'
+  # gem 'guard-haml'
 end
 
 group :development, :test do
@@ -24,6 +28,17 @@ group :development, :test do
   gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
   gem 'guard-spork'
   gem 'childprocess'
+  gem 'guard-bundler'
+  # Integrates jasmine js testing
+  gem 'jasmine-rails'
+  # With guard
+  gem 'guard-jasmine', git: "git://github.com/guard/guard-jasmine.git", branch: "jasmine-2"
+  # Checks ruby code grammar
+  gem 'rubocop', require: false
+  # With rspec
+  gem 'rubocop-rspec'
+  # With guard
+  gem 'guard-rubocop'
 end
 
 group :test do
