@@ -14,6 +14,10 @@ group :development do
   gem 'sqlite3'
   gem 'annotate', '~>2.6.5'
   gem 'better_errors'
+  gem 'guard-migrate'
+  gem 'guard-spring'
+  gem 'guard-rails'
+  # gem 'guard-haml'
 end
 
 group :development, :test do
@@ -24,6 +28,17 @@ group :development, :test do
   gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
   gem 'guard-spork'
   gem 'childprocess'
+  gem 'guard-bundler'
+  # Integrates jasmine js testing
+  gem 'jasmine-rails'
+  # With guard
+  gem 'guard-jasmine', git: "git://github.com/guard/guard-jasmine.git", branch: "jasmine-2"
+  # Checks ruby code grammar
+  gem 'rubocop', require: false
+  # With rspec
+  gem 'rubocop-rspec'
+  # With guard
+  gem 'guard-rubocop'
 end
 
 group :test do
