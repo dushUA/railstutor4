@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+gem 'haml-rails'
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg', '0.17.1'
@@ -10,7 +11,6 @@ group :production do
 end
 
 group :development do
-  gem 'haml-rails'
   gem 'sqlite3'
   gem 'annotate', '~>2.6.5'
   gem 'better_errors'
