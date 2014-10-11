@@ -47,10 +47,10 @@ guard :bundler do
   watch('Gemfile')
 end
 
-guard 'migrate' do
-  watch(%r{^db/migrate/(\d+).+\.rb})
-  watch('db/seeds.rb')
-end
+# guard 'migrate' do
+#   watch(%r{^db/migrate/(\d+).+\.rb})
+#   watch('db/seeds.rb')
+# end
 
 # guard :rubocop, all_on_start: false, cli: ['--out', 'log/rubocop.log'] do
 #   watch(%r{^(.+)\.rb$}) { |m| "#{m[1]}.rb" }
