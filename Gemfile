@@ -20,12 +20,14 @@ group :development do
   gem 'guard-migrate'
   gem 'guard-spring'
   gem 'guard-rails'
+  gem 'binding_of_caller'
   # gem 'guard-haml'
 end
 
 group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
+  gem 'rspec-its'
   gem 'guard-rspec'
   gem 'guard-livereload'
   gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible

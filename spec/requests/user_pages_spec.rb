@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "UserPages", :type => :request do
+RSpec.describe 'UserPages', :type => :request do
   subject {page}
 
   describe 'signup page' do
@@ -52,6 +52,7 @@ RSpec.describe "UserPages", :type => :request do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
 
+        it { should have_link('Sign out') }
         it { should have_title(user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
       end
